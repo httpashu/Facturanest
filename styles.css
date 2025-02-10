@@ -1,0 +1,92 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #000000 0%, #000033 50%, #000066 100%);
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.content {
+    text-align: center;
+    transform-style: preserve-3d;
+    animation: float 6s infinite ease-in-out;
+}
+
+.title {
+    font-size: 4rem;
+    margin: 0;
+    transform: translateZ(50px);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    transform: translateZ(30px);
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+    transform: translateZ(40px);
+}
+
+.countdown-item {
+    text-align: center;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transform: translateZ(20px);
+}
+
+.subscribe-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #ff6f61;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background: #ff3b2f;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotateY(0);
+    }
+    50% {
+        transform: translateY(-20px) rotateY(10deg);
+    }
+}
